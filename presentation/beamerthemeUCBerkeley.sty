@@ -28,6 +28,7 @@
 \definecolor{BerkeleyTableBlue1}{RGB}{207,226,234}
 \definecolor{BerkeleyTableBlue2}{RGB}{232,241,245}
 \definecolor{BerkeleyBlue}{HTML}{003262}
+\definecolor{White}{RGB}{255,255,255}
 
 \setbeamertemplate{title page}[default][left]
 \setbeamerfont{title}{family=\rmfamily,size=\Huge}
@@ -61,8 +62,23 @@
 \end{tikzpicture}%
 }
 
+\makeatletter
+\def\ps@navigation@titlepage{%
+  \setbeamertemplate{footline}{my special footline}% <-- define here the specific footline for the titlepage 
+\@nameuse{ps@navigation}}
+\addtobeamertemplate{title page}{\thispagestyle{navigation@titlepage}}{}
+\makeatother
+
 \setbeamertemplate{footline}{%
 \vskip0.15\paperheight
+}
+
+\addtobeamertemplate{footline}{}{%
+    \usebeamerfont{footline}%
+    \usebeamercolor[fg]{title}%
+    \hspace{0.9\paperwidth}
+    \textcolor{white}{\large\insertframenumber/\inserttotalframenumber}
+    \vspace{0.23cm}
 }
 
 \newcommand{\smallframetitle}{%
