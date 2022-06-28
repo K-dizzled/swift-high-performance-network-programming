@@ -6,7 +6,7 @@ There were two main goals of this research:
 
 ## Research flow
 
-During the project SwiftNIO framework was chosen for testing `Swift` performance. `SwiftNIO` is declared to be "Netty, but written in Swift". I've chosen to compare `Swift` to `Java` first, so I've written simple server applications in both `Java` and `Swift`. 
+During the project `SwiftNIO` framework was chosen for testing `Swift` performance. `SwiftNIO` is declared to be "Netty, but written in Swift". I've chosen to compare `Swift` to `Java` first, so I've written simple server applications in both `Java` and `Swift`. 
 
 The servers keep a long term connection with the client until client disconnects by himself. A single request to the server contains an integer `N`. Server answers with a Fibbonachi sequence from `0` to `N`. I've tried to make both implementations as close to each other as possible. 
 
